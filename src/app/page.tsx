@@ -39,13 +39,8 @@ const testimonials = [
     testimonial: "Fantastic experience. The staff is very professional!",
     imageUrl:
       "https://content.jdmagicbox.com/comp/ahmedabad/s5/079pxx79.xx79.220310224506.q4s5/catalogue/spiral-ent-care-ahmedabad-audiologist-doctors-kodtz188k2.jpg",
-  },
-  {
-    name: "Dr. Bob Brown",
-    testimonial: "Very knowledgeable and attentive. Will come back again!",
-    imageUrl:
-      "https://kdahweb-static.kokilabenhospital.com/kdah-2019/shop/package/images/16225531190.jpg",
-  },
+  }
+ 
 ];
 
 export default function Home() {
@@ -99,9 +94,9 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-black">
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white">
       <div className="p-4 flex bg-white shadow-lg dark:bg-gray-800 justify-between items-center">
-        <div className="text-2xl font-extrabold text-black dark:text-white">
+        <div className="text-3xl font-extrabold  text-black dark:text-white">
           Fix Health
         </div>
         <button
@@ -112,32 +107,23 @@ export default function Home() {
         </button>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center justify-between min-h-screen p-10">
-        <div className="flex flex-col justify-center w-full md:w-1/2">
-          <h1 className="text-4xl md:text-6xl font-bold text-black mb-4 dark:text-white">
-            Welcome to Fix Health
-          </h1>
-          <p className="text-base md:text-sm text-black mb-6 dark:text-gray-300">
-            Your health is our priority. Experience the best care from our
-            professionals.
-          </p>
-          <button className="bg-red-600 text-white py-2 px-4 rounded-lg shadow">
-            Book a Consultation
-          </button>
-        </div>
+    <div className="flex flex-col justify-center bg-cyan-200 min-h-screen p-10 bg-[url('https://media.licdn.com/dms/image/D4D12AQGHf3cXB-a_Pw/article-cover_image-shrink_720_1280/0/1679989721915?e=2147483647&v=beta&t=gSRxaHbmONY15TSKarHDWWZEiSYzFeOHCL-OaXyQ2ns')] bg-cover bg-center bg-no-repeat">
+  <div className="bg-black bg-opacity-50 w-full h-full flex flex-col justify-center items-center text-center p-6 md:p-10">
+    <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+      Welcome to Fix Health
+    </h1>
+    <p className="text-base md:text-lg text-gray-200 mb-6">
+      Your health is our priority. Experience the best care from our professionals.
+    </p>
+    <button className="bg-red-600 text-white py-2 px-4 rounded-lg shadow hover:bg-red-700 transition">
+      Book a Consultation
+    </button>
+  </div>
+</div>
 
-        <div className="w-full md:w-1/2 flex justify-center mt-4 md:mt-0">
-          <Image
-            src="https://www.inhousemedicare.com/wp-content/uploads/2022/06/Doctor-consultation.png"
-            alt="Hero Image"
-            width={400}
-            height={300}
-            className="w-3/4 h-auto rounded-lg shadow-lg"
-          />
-        </div>
-      </div>
 
-      <section className="p-10 bg-gray-200 dark:bg-gray-800">
+
+      <section className="p-10  bg-gray-200 dark:bg-gray-800">
         <h2 className="text-2xl font-bold mb-4">Testimonials</h2>
         <div className="flex space-x-4 overflow-x-auto">
           {testimonials.map((testimonial) => (
@@ -149,7 +135,7 @@ export default function Home() {
                 src={testimonial.imageUrl}
                 alt={testimonial.name}
                 width={100}
-                height={100}
+                height={200}
                 className="w-32 h-32 rounded-full mb-4"
               />
               <h3 className="font-bold text-lg">{testimonial.name}</h3>
